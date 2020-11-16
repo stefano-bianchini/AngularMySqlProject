@@ -1,0 +1,21 @@
+<table class="table tab1">
+    <thead>
+      <tr>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Prezzo Giornaliero</th>
+        <th scope="col">Prezzo Settimanale</th>
+        <th scope="col">Prezzo Mensile</th>
+        <th scope="col">Opzioni</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let categoria of categorie">
+        <td>{{categoria.descrizione}}</td>
+        <td>{{categoria.prezzog}}</td>
+        <td>{{categoria.prezzos}}</td>
+        <td>{{categoria.prezzom}}</td>
+        <button (click)="rimuoviCategoria(categoria)"id="btn-rem" class="btn btn-primary">Rimuovi</button>
+      </tr>    
+    </tbody>
+</table>

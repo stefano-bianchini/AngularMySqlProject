@@ -1,0 +1,27 @@
+<form class="form-add">
+    <h5>Seleziona Categoria</h5>
+    <select [(ngModel)]="selectedOption" name="" id="select-cat" class="form-control">
+        <option *ngFor="let categoria of categorie" value="">{{categoria.descrizione}}</option>
+    </select>
+    <button (click)="print()">Click me</button>
+    <p>Selected option: {{ selectedOption }}</p>
+    <p>Button output: {{ printedOption }}</p>
+    <div class="form-group">
+      <label for="descrizioneInput">Descrizione</label>
+      <input class="form-control" id="descrizioneInput" aria-describedby="emailHelp" placeholder="Descrizione">
+    </div>
+    <div class="form-group">
+      <label for="PrezzogInput">Prezzo Giornaliero: </label>
+      <input class="form-control" id="PrezzogInput" placeholder="Prezzo Giornaliero">
+    </div>
+    <div class="form-group">
+        <label for="PrezzosInput">Prezzo Settimanale: </label>
+        <input class="form-control" id="PrezzosInput" placeholder="Prezzo Settimanale: ">
+      </div>
+    <div class="form-group">
+        <label for="PrezzomInput">Prezzo Mensile: </label>
+        <input class="form-control" id="PrezzomInput" placeholder="Prezzo Mensile: ">
+    </div>
+    <button type="submit" class="btn btn-primary">Modifica</button>
+
+</form>
